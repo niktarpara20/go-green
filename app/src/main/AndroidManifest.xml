@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gogreen">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GoGreen">
+        <activity android:name=".activities.ProfileEditUserActivity"></activity>
+        <activity android:name=".activities.ShopReviewsActivity" />
+        <activity android:name=".activities.WriteReviewActivity" />
+        <activity android:name=".activities.OrderDetailsSellerActivity" />
+        <activity android:name=".activities.OrderDetailsUsersActivity" />
+        <activity
+            android:name=".activities.ShopDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainUserActivity"
+            android:exported="false" />
+        <activity android:name=".activities.EditProductActivity" />
+        <activity
+            android:name=".activities.ProfileEditSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainSellerActivity"
+            android:exported="true" />
+        <activity android:name=".activities.RegisterSellerActivity" />
+        <activity android:name=".activities.RegisterUserActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity
+            android:name=".activities.NextActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

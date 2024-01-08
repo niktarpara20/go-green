@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/row_product_bck"
+    android:elevation="7dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="9dp">
+
+        <ImageView
+            android:id="@+id/productIconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/cartfigma"
+            android:layout_marginRight="5dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_toEndOf="@+id/productIconIv"
+            android:layout_toRightOf="@+id/productIconIv">
+
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Product Description"
+                android:textColor="#959595"
+                android:minLines="2"
+                android:maxLines="2"
+                android:layout_below="@+id/titleTv"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/descriptionTv">
+
+                <TextView
+                    android:id="@+id/discountedPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹10"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#000"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/originalPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹20"
+                    android:layout_toEndOf="@+id/discountedPriceTv"
+                    android:textColor="#000"
+                    android:layout_toRightOf="@+id/discountedPriceTv" />
+
+                <TextView
+                    android:id="@+id/discountedNoteTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10% OFF"
+                    android:textColor="#FB8C00"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/originalPriceTv"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addToCartTv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:background="@drawable/shape_rect05"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/descriptionTv" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

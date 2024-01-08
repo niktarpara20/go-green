@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ShopDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GoGreen Nursary"
+            android:paddingTop="5dp"
+            android:textColor="@color/colorGreen"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/reviewBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/cartBtn"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_star_border_24" />
+
+        <ImageButton
+            android:id="@+id/cartBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:background="@null"
+            android:src="@drawable/cart_black" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:id="@+id/shopDetailRl">
+
+
+            <TextView
+                android:id="@+id/addressTv"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location_gray"
+                android:drawablePadding="6dp"
+                android:padding="5dp"
+                android:text="near a iscon temple,Anand"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/openCloseTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/open">
+            </ImageView>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_below="@+id/openCloseTv"
+                android:progressBackgroundTint="#FFFF00"
+                android:progressTint="#FFFF00"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:rating="5" />
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressTv"
+                android:layout_marginTop="4dp"
+                android:drawableLeft="@drawable/ic_phone_gray"
+                android:drawablePadding="6dp"
+                android:paddingLeft="5dp"
+                android:text="+91 9999999999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneTv"
+                android:layout_marginTop="4dp"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:drawablePadding="6dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="abc@gmail.com"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/deliveryFeeTv"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailTv"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="2dp"
+                android:text="Delivery Fees : 50"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/productsRl"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shopDetailRl">
+
+        <!--searchView-->
+        <!--Filter-->
+        <EditText
+            android:id="@+id/searchProductEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@+id/filterProductBtn"
+            android:background="@drawable/shape_rect06"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="10dp"
+            android:elevation="10dp"
+            android:hint="Search Here..."
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/filterProductBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:elevation="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/filterbtn" />
+
+        <TextView
+            android:id="@+id/filteredProductsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchProductEt"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="3dp"
+            android:text="Showing All"
+            android:textColor="#000" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filteredProductsTv"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/row_product_seller" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
